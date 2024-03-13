@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table,td,th{ 
+        
+        border: 1px solid black;
+        border-collapse: collapse;
+    
+    }
+    th:nth-child(even),td:nth-child(even){
+        background-color: rgba(88, 238, 238, 0.695);
+    }
+    
+    img{
+        width: 250px;
+        height: 170px;
+        border-radius: 50%;
+        border: 1px solid red;
+    }
+    .btn{
+        color:rgb(255, 240, 240);
+        text-decoration: none;
+        padding: 10px 10px;
+        margin: 15px;
+        background:none;
+        background-color: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+    }
+    .btn:hover{
+        background: none;
+        color: rgb(0, 0, 0);
+
+    }
+</style>
+<body>
+  <table style="width: 100%;">
+        <tr >
+            <th style="width: 5%;" >S.no</th>
+            <th style="width:5%;">Name</th>
+            <th style="width:100%;">Address</th>
+        </tr>
+        <tr >
+            <td >1</td>
+            <td ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td >1</td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td></td>
+            <td>2</td>
+            <td></td>
+          
+        </tr>
+
+         <tr>
+            <td></td>
+            <td></td>
+            <td>3</td>
+        </tr>
+    </table>
+    <br><br><br>
+    <table>
+        <tr>
+            <th>      sno</th>
+            <th colspan=""> name</th>
+            <td>sample</td>
+            
+        </tr>
+        <tr>
+            <td> </td>
+            <td colspan="2">as </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td colspan="2">as </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td >as </td>
+            <td>inside table
+                <table>
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table><br><br><br>
+    <table style="width: 100%;">
+        <tr>
+            <th style="width: 5%;">S.No</th>
+            <th style="width: 30%;">Name</th>
+            <th style="width: 30%;">Image</th>
+            <th style="width: 25%;">Update</th>
+            
+        </tr>
+        <tr>
+            <td>Sun</th>
+            <td>1</th>
+            <td><img src="https://static.toiimg.com/photo/103807110.cms" alt=""></th>
+            <td>
+                <button class="btn">Edit</button> 
+                 <button class="btn">Remove</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Full Moon</td>
+            <td><img src="https://images.pexels.com/photos/47367/full-moon-moon-bright-sky-47367.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"alt=""></td>
+            <td>
+                <button class="btn">Edit</button> 
+                 <button class="btn">Remove</button>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>eclipses</td>
+            <td><img src="https://c.tadst.com/gfx/600x337/eclipse-traditions.jpg?1"alt=""></td>
+            <td>
+                <button class="btn">Edit</button> 
+                 <button class="btn">Remove</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

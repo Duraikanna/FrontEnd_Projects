@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Angkor&family=Madimi+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color:#bbb;
+    overflow-y: hidden;
+}
+.main{
+    color: red;
+    font-size: large;
+    border: 2px solid black;
+    height: 100vh;
+    margin: 50px;
+    overflow-y: hidden;
+    width: 90%;
+
+
+}
+.title{
+    font-family: "Madimi One";
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family:angkor;
+    color: rgba(21, 15, 11, 0.737);
+}
+.display{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin-top: 20px; */
+    margin: 30px;
+
+}
+.display p{
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 50px;
+}
+.input{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px;
+    align-items: center;
+    text-align: center;
+}
+.input input[ type="button"]{
+    background: none;
+    padding: 10px 20px;
+    margin: 20px 0 ;
+}
+input[ type="button"]:hover{
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px #888888 ;
+}
+input[type="button"]:active{
+    color:#fff;
+    background-color: lightseagreen;
+}
+input[type="text"]{
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    align-items: center;
+    color:darkred
+
+}

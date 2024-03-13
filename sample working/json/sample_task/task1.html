@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>billing</title>
+    <style>
+        .body{
+            background-color: rgba(123, 244, 244, 0.343);
+        }
+        header{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .log {
+            border: 2px solid black; 
+            display: flex;
+         justify-content:flex-start
+        }
+
+        .bill
+        {
+            border: 1px solid red;
+            
+            margin:200px 100px ;
+            height: 500px;
+                   
+        }
+        table{
+            margin-left: 10%;
+            width: 500px;
+            height: 600px;
+        }
+    table,td,th{ 
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    .cname{
+        display: flex;
+        color: red;
+        flex-direction: row;
+    }
+    .ppname{
+        display: flex;
+        color: red;
+        flex-direction: row;
+    }
+    .ratee{
+        display: flex;
+        color: red;
+        flex-direction: row;
+    }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <header>
+            <img src="" alt="cmp_logo" class="log">
+            <h2>Billing</h2>
+        </header>
+        <table>
+            <tr>
+                <td>
+                    <label for=""class="cname">Customer Name:</label>
+                    <input type="text" id="uname" class="cname"><br>
+                    <label for="product" class="ppname">Product Name:</label>
+                   <input type="text" class="ppname" id="pname"><br>
+                   <label for="rate" class="ratee">Rate:</label>
+                   <input type="number"  class="ratee" range="100" step="2" id="rate">
+                   <div class="btn">
+                    <br><br><br>
+                    <center><button onclick="submit()">Add Product </button></center>
+                </td>
+                <td>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>product name</td>
+                                <td>rate</td>
+                            </tr>
+                        </thead>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+</body>
+<script>
+    function submit(){
+        var cname=document.getElementById("uname").value;
+        var pname=document.getElementById("pname").value;
+        var rate=document.getElementById("rate").value;
+       const li= document.createElement("<tr><td>");
+       document.write(cname);
+       console.log(cname+" "+ pname+" "+ rate);
+
+    }
+   
+</script>
+</html>

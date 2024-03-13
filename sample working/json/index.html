@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Basic of JSON</title>
+    </head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+            background-color :#cadaf8; ;
+        }
+        .main{
+           position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            border: 1px solid black ;
+            width: 500px;
+            height: 300px;
+            text-align: center;
+            align-items: center;
+            align-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+    <body>
+        <div class="main">
+            <label for="">User Name</label>
+            <input type="text" id="uname" required placeholder="User Name"> <br><br>
+            <label for="">password</label>
+            <input type="password" name="pas" id="pass" placeholder="password"><br>
+            <button onclick="submit()">submit</button>
+        </div>
+    </body>
+    <script>
+        var user=
+            {"userName":["user1","user2"],
+            "pass":["pass1","pass2"]
+            }
+            var o=JSON.stringify(user);
+            console.log(user);
+            console.log(o);
+        function submit()
+        {
+            var name=document.getElementById("uname").value;
+            var password=document.getElementById("pass").value;
+            // console.log("hai "+name+" "+ "hello" + password);
+            // console.log(user.userName);
+            console.log(user);
+            for(i=0 ;i<=user.userName.length;i++)
+            {
+                if(name == user.userName[i] && password == user.pass[i])
+                    {
+                        alert("login ok ")
+                        break;
+                    }
+                    
+                else
+                    {
+                        alert(" invalid user name and password");
+                    }
+        }
+        }
+        
+        
+
+    </script>
+</html>

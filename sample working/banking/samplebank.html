@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <h1>Banking app</h1>
+    <p>Click the button below to start the app. Options: (w)ithdraw, (d)eposit, (b)alance, (q)uit</p>
+    <button onclick="start()">Click here to get started.</button>
+
+    <script type="text/javascript">
+        let balance = 0;
+
+        function start() {
+            let input = prompt('What would you like to do?');
+                        
+            // debug output for testing
+            // Open the inspector to see user input
+            // console.log(input);
+
+            if (input == 'q' || input == "") { // Enter quits as well.
+                return;
+            } else if (input == 'w') {
+                withdraw(); // see functions below
+            } else if (input == 'd') {
+                deposit();
+            } else if (input == 'b') { 
+                showBalance();
+            } else {
+                alert('Unsupported action: use (w)ithdraw, (d)eposit, or (b)alance. Press q or enter to quit');
+            }
+            start(); // restarts the app after action
+        }
+        
+         function deposit() {
+            let amount = prompt('Enter an amount to deposit');
+            amount = isNaN(amount) ? 0 : parseFloat(amount);
+            balance += amount;
+            return balance;
+         }
+         
+         function showBalance() {
+            alert('Current balance: '+balance);
+         }
+
+        function withdraw() {
+            let amount = prompt('Enter an amount to withdraw');
+            amount = isNaN(amount) ? 0 : parseFloat(amount);
+            balance = balance - amount;
+            return balance;
+         }
+         
+    </script>
+</body>
+</html>

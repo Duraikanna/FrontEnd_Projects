@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking App</title>
+    <link ref="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="title">Welcome to XYZ Bank</div>
+        <div class="display">
+            <div class="withdraw">
+                <h2>Total withdraw:</h2>
+                <p id="dis_wid"></p>
+            </div>
+            
+            <div class="deposite">
+                <h2>Total deposite:</h2>
+                <p id="dis_dep"></p>
+            </div>
+            <div class="balance">
+                <h2>Total balance:</h2>
+                <p ><small id="dis_bal"></small></p>
+            </div>
+        </div>
+       
+        <div class="input">
+            <div class="wid" id="wid">
+                <input type="text" id="withdraw" ><br>
+                <input type="button" onclick="withdraw()" value="Withdraw"> 
+            </div>
+            <div class="dep" id="dep">
+                <input type="text" id="deposite" ><br>
+                  <input type="button" onclick="deposit()" value="Deposit">
+            </div>
+            <div class="bal" id="bal">
+                <input type="text" id="total" ><br>
+                <input type="button" onclick="balance()" value="Balance">
+            </div>
+        </div>
+    </div>
+   <script src="./src/css/js/script.js"></script>
+</body>
+</html>

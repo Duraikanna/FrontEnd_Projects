@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+</head>
+<style>
+    *{
+        margin:0
+    }
+    .main{
+        display: grid;
+        grid-template-areas:
+        'header header header header header header' 
+        'left left left left left right' 
+        'footer footer footer footer footer footer' ;
+        height: 100vh;
+        }
+    .header{
+        grid-area: header;
+        padding: 30px;
+        margin: 10px;
+        background-color: #aaa;
+        width: 100%;
+    }
+    .left,.right,.middle{
+       padding :10px;
+       margin: 1px;
+       /* height: 300px; */
+    }
+    .left{
+        background-color: #bbb;
+        grid-area: left;
+    }
+    .middle{
+        background-color: #bbb;
+        grid-area: middle;
+    }
+    .right{
+        background-color: #bbb;
+        grid-area: right;
+    }
+    .footer{
+
+        grid-area: footer;
+        padding: 10px;
+        /* margin: 10px; */
+        background-color: #aaa;
+        width: 100%;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="header">header</div>
+        <div class="left">Left</div>
+        <!-- <div class="middle">Middle</div> -->
+        <div class="right">Right</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result">  </div>
+    <script>
+        const person={
+            FirstName:'Durai',
+            LastName:'raj',
+            Age:22,
+            isAlive:true,
+            FullName : function () 
+            {
+                return this.FirstName+" "+this.LastName;
+            },
+            FullDetails:function()
+            {
+                return `FullName: ${this.FullName()}<br><br>
+                       Age : &nbsp  ${this.Age}<br><br>
+                       IsAlive : ${this.isAlive}   
+                                        `;
+            }
+        }
+        const method={
+            yearofbirth(){
+              return( (new Date().getFullYear()) - this.Age);
+            // console.log( new Date().getFullYear())
+            },
+        }
+        Object.assign(person,method)
+        // console.log(person);
+        console.log(person.yearofbirth());
+
+        document.getElementById('result').innerText=person.FullName();
+        document.getElementById('result').innerHTML=person.FullDetails();
+        
+    </script>
+</body>
+</html>

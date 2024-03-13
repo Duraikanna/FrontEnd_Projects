@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html en="lan">
+    <head>
+        <title>
+            Age calculator
+        </title>
+    </head>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: lightblue;
+        }
+        .main{
+            border: solid 1px rgb(199, 191, 191);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 600px;
+            height: 500px;
+        }
+        .input{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* flex-direction:row-reverse ; */
+            
+        }
+        .input input{
+            padding: 10px 50px;
+            margin: 20px;
+            font-weight: bold;
+            
+        }
+        .input button{
+            padding: 10px 20px;
+            color: red;
+            background:none;
+        }
+        .input button:hover{
+           background-color: whitesmoke;
+           color: black;
+           font-size: 0.9rem;
+           text-transform: uppercase;
+        }
+        .main ul{
+            color: red;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 100px;
+            width: 100%;
+        }
+        span{
+            display: block;
+            width: 100px;
+            height: 80px;
+            border-radius: 5px;
+            color: red;
+            background-color:whitesmoke;
+            padding: 20px;
+            margin-bottom:20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+        }
+        li{
+            list-style: none;
+            width: 120px;
+            height: 150px;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <body>
+        <div class="main">
+            <h2>Age calculator</h2>
+            <div class="input">
+                <label for="">Choose  your brith date</label>
+                <input type="date" name="" id="date">
+                <button type="submit" onclick="submit()">submit</button>
+            </div>
+            <ul>
+              
+                <li><span id="day"></span>Days</li>
+                <li><span id="Months"></span>Months</li>
+                <li><span  id="Year"></span>Year</li>
+                
+            </ul>
+        </div>
+        <script>
+            
+            function submit(){
+                
+                var date=document.getElementById("date").value;
+                
+               let dob=new Date(date);
+               let day=dob.getDate();
+               let Months=dob.getMonth();
+               let Year=dob.getFullYear();
+
+               console.log("day : "+day+"  months : "+Months+"  year : "+Year)
+
+            let date2=new Date();
+            let d2=date2.getDate();
+            let m2=date2.getMonth();
+            let y2 =date2.getFullYear();
+            var mon=[31,28,31,30,31,30,31,31,30,31,30,31];
+
+            if(day>d2)
+            {
+                d2=d2+mon[m2-1];
+                m2=m2-1;
+            }
+            if(Months>m2)
+            {
+                m2=m2+12;
+                y2=y2-1;
+            }
+            day=d2-day;
+            Months=m2-Months;
+            Year=y2-Year
+            
+            console.log("day : "+day+"  months : "+Months+"  year : "+Year)
+
+            var span=document.getElementsByTagName("span");
+            document.getElementById("day").innerHTML=day
+            document.getElementById("Months").innerHTML=Months
+            document.getElementById("Year").innerHTML=Year
+
+
+
+
+
+
+
+                
+            //    let now =new Date();
+            //    let ydiff=now.getFullYear()-Year;
+            //    let mdiff=Math.abs(now.getMonth()-Months);
+            //    let datediff=now.getDate()-day;
+            //    let diff=Math.abs(now-dob);
+            //    let age=Math.floor(diff/(1000*60*60*24*365));
+
+            //    console.log("after :")
+            //    console.log(now)
+
+  
+            //    console.log("day : "+datediff+"  months : "+mdiff+"  year : "+mdiff)
+            //    console.log(age)
+            //    console.log("days  "+Math.floor(diff/(1000*60*60*24*365)))
+            }
+        </script>
+    </body>
+</html>

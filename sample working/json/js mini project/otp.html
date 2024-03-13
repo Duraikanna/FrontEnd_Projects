@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP generator</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .main{
+        min-height: 500px;
+        width: 800px;
+        border: 1px solid black;
+        margin: auto;
+         width: 70%;
+         padding: 5px;
+         align-items: center;
+         text-align: center;
+         /* background-color: rgba(202, 46, 46, 0.625); */
+
+    }
+    #otp{
+        padding: 8px 15px;
+        background: none;
+        color: rebeccapurple;
+        font-size: medium;
+        margin: 30px 0;
+    }
+   .input{
+        /* padding:10px ;
+        color: red; */
+        width: 100px;
+        padding: 10px;
+        text-align: center;
+        border-radius: 20%;
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+    #text{
+        text-align: center;
+        color: cadetblue;
+    }
+    button{
+        padding: 8px 15px;
+        background: none;
+        color: coral;
+        margin-top: 50px;
+      
+        /* margin-left: 200px; */
+    }
+
+</style>
+<body>
+    <div class="main" id="main">
+
+        <h2 id="text">OTP generator</h2>
+        <input type="button" id= "otp"value="generate Otp" onclick="otp_req()">
+        <h2>Enter the Otp</h2>
+        <div id="input">
+            <input type="number" name="" class="input" id="input1" maxlength="1">
+            <input type="number" name="" class="input" id="input2" maxlength="1">
+            <input type="number" name="" class="input" id="input3"  maxlength="1">
+            <input type="number" name="" class="input" id="input4"  maxlength="1">
+        </div>
+        
+        <button  onclick="otp()">Submit</button>
+
+    </div>
+   
+    <script>
+        let
+        
+        function otp_req(){
+           globalThis.n1=Math.floor(Math.random()*5);
+           globalThis.n2=Math.floor(Math.random()*5);
+           globalThis.n3=Math.floor(Math.random()*5);
+           globalThis.n4=Math.floor(Math.random()*5);
+            console.log(n1+"  "+n2+" " +n3+"  "+n4);
+
+        }
+        function otp(){
+            globalThis. main=document.getElementById("main");
+            var input1=document.getElementById("input1").value;
+            var input2=document.getElementById("input2").value;
+            var input3=document.getElementById("input3").value;
+            var input4=document.getElementById("input4").value;
+            console.log(input1)
+            if(input1==n1 && input2==n2 &&input3==n3&&input4==n4)
+            {
+                main.style.backgroundColor=" rgba(138, 227, 5, 0.252)";
+                alert("OTP verified");
+                console.log(input1 +"befor")
+                input1.value=' ';
+                console.log( input1.value=' ' + "  after")
+            }
+            else
+            {
+            main.style.backgroundColor=" rgba(202, 46, 46, 0.625)";
+                alert("OTP failed")
+            }
+            input1.innerHtml=' ';
+            
+        }   
+        var text=["hai im 1","hai im 2","hai im 3"]
+        // console.log(Math.random(text));
+        
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>1</title>
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+.container{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid rgb(47, 0, 255);
+    width: 50%;
+    height: 50vh;
+}
+.div1{
+position:relative;
+width:60%;
+height:60%;
+background-color:rgb(129, 234, 255);
+border:1px solid black;
+top:50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+.div2{
+    /* width:100px;
+height:100px; */
+/* border: 1px solid red ; */
+position: absolute;
+left:50%;
+top:50%;
+transform: translate(-50%,-50%);
+}
+#small{
+    
+    color: blue;
+    /* border: 1px solid black; */
+   display: flex;
+   flex-direction: row;
+   justify-content: end;
+   cursor:pointer;
+}
+p{
+    margin-top: 10px;
+    float: right;
+}
+
+</style>
+
+<body>
+    <div class="container">
+        <div class=div1>
+            <div class=div2>
+                <form >
+                    <label for="Un">Name:</label>
+                        <input type="text" name="Un" id="">
+                        <label for="Un">Password:</label>
+                        <input type="password"  id="pass">
+                        <label for="Un">Confirm password:</label>
+                        <input type="password" >
+                        <small id="small" onclick="show()">show</small><br>
+                        <button class="btn" id=" uname" onclick="submit()">sumbit</button>
+                        <!-- <input type="button" value="sumbit"
+                         onclick="sumbit()" class="btn"> -->
+                        <button class="btn">reset</button>
+                  <a href="sample.html"><p>Old user!?</p></a> 
+                </form>
+            </div>
+            </div>
+    </div>
+
+</body>  
+<script>
+    function submit(){
+        var uname=document.getElementById("uname").value;
+        var pass=document.getElementById("pass").value;
+        // console.log(uname);
+    }
+    function show(){
+    var pass=document.getElementById("pass");
+    if(pass.type == "password")
+        pass.type= "text";
+    else
+        pass.type="password";
+    }
+</script>
+</html>

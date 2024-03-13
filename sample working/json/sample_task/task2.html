@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+</head>
+<style>
+    table,th,td{
+        border: 1px solid black ;
+        border-collapse:collapse ;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+    }
+    .tb{
+        width: 500px;
+        height: 500px;
+        border: 2px solid red;
+    }
+    td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+input[type=text], input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+</style>
+<body>
+    <div class="main">
+        <table class="tb">
+            <tr>
+                <td>
+                    <form action="" class="form ">
+                        <label for="name">Name:</label>
+                        <input type="text" id="cname"  required >
+                        <label for="name" >Product name:</label>
+                        <input type="text"  id="pname" >
+                        <label for="rate">Rate:</label>
+                        <input type="number" id="rate">
+                        <input type="button" onclick="add()" value="submit">
+                    </form>
+                </td>
+                <td>
+                    <table id="table2">
+                        <thead>
+                            <tr>
+                                <td>Product name</td>
+                                <td>Rate</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+    console.log(1+2+3)
+    console.log("1"=== 1)
+    console.log(1+2+"3")
+        function add(){
+            var formdata=readdata();
+            insertrow(formdata);
+        }
+        function readdata(){
+            var formdata={};
+            formdata["productname"]=document.getElementById("pname").value;
+            formdata["rate"]=document.getElementById("rate").value;
+            return formdata;
+        }
+        function insertrow(data){
+            var table=document.getElementById("table2").getElementsByTagName("tbody")[0];
+            var newrow =table.insertRow(table.length);
+            cell1=newrow.insertCell(0);
+            cell1.innerHTML=data.productname;
+            cell2=newrow.insertCell(1);
+            cell2.innerHTML=data.rate;
+            // var btn=document.createElement("button");
+            // var n=document.createTextNode("total");
+            // btn.appendChild(n);
+            // var table2=document.getElementById("table2")
+            // document.table2.appendChild(btn);
+            cell2.innerHTML=`<button onclick="total" >total</button>`;
+        }
+    </script>
+</body>
+</html>
